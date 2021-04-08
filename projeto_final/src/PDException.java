@@ -6,7 +6,7 @@ public class PDException extends Exception {
   private static final long serialVersionUID = 1L;
 
   public String getMessage(){
-      return "O perfil está desativado!";
+      return "O perfil está desativado.";
   }
 
 }

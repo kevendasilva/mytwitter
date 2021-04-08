@@ -1,4 +1,5 @@
 import java.util.Vector;
+
 interface ITwitter {
 
   public void criarPerfil(Perfil usuario);
