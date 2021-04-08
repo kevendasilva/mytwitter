@@ -1,7 +1,12 @@
 public class Tweet {
 
+  // Atributos da classe Tweet
+
   private String usuario;
   private String mensagem;
+
+  
+  // Métodos da classe Tweet
 
   public void setUsuario(String usuario){
     this.usuario = usuario;
