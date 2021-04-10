@@ -87,6 +87,7 @@ public class MyTwitter implements ITwitter{
         Tweet tweet = new Tweet();
         // Adicionando a mensagem
         tweet.setMensagem(mensagem);
+        tweet.setUsuario(usuario);
 
         // Adicionando o tweet ao perfil
         perfil.addTweet(tweet);
@@ -191,11 +192,11 @@ public class MyTwitter implements ITwitter{
     Perfil perfil = repositorio.buscar(usuario);
     // O perfil deve existir e estar ativo
 
+    // Número de seguidores
+    int numSeguidores = 0;
+
     if (isAtivoAndExiste(perfil)) {
       // Sim
-
-      // Número de seguidores
-      int numSeguidores = 0;
 
       Perfil seguidorRep;
 
