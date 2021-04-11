@@ -1,0 +1,17 @@
+- usuario: string
+- seguidos: Vector<Perfil>
+- seguidores: Vector<Perfil>
+- timeline: Vector<Tweet>
+- ativo: boolean
+
++ Perfil(usuario: String)
++ addSeguido(usuario: Perfil): void
++ addSeguidor(usuario: Perfil): void
++ addTweet(tweet: Tweet): void
++ setUsuario(usuario: String): void
++ getUsuario(): String
++ getSeguidos(): Vector<Perfil>
++ getSeguidores(): Vector<Perfil>
++ getTimeline(): Vector<Tweet>
++ setAtivo(valor: boolean): void
++ isAtivo(): boolean

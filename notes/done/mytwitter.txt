@@ -1,0 +1,7 @@
+as funcionalidades são acessadas a partir da classe MyTwitter
+
+- repositorio: IRepositorioUsuario
+
+passado como argumento para o constrututor da classe.    
+
+implementa a interface ITwitter.

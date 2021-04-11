@@ -39,6 +39,7 @@ public class Main {
         }
       } while (opcao != 2);
 
+      // Fechando o leitor
       leitor.close();
   }
 }

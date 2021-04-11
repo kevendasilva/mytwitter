@@ -1,0 +1,4 @@
+"Modelo" para criação de Classes
+
+A classe filhas, herdam boa parte do comportamento da classe mãe. Mas, a classe mãe pode deixar
+métodos em "branco", para a classe filhas implementarem o comportamento desejado para o método.

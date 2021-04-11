@@ -1,0 +1,7 @@
+- usuario: String
+- mensagem: String
+
++ setUsuario(usuario: string): void
++ getUsuario(): String
++ setMensagem(mensagem: String): void
++ getMensagem(): String

@@ -49,6 +49,7 @@ class Menu {
 
   private String usuario;
 
+
   // Métodos da classe
 
   public void init() {
@@ -127,6 +128,7 @@ class Menu {
         }
 
         break;
+
       // Pessoa juridica
       case 2:
         PessoaJuridica perfilPJ = new PessoaJuridica(usuarioCadastro);
@@ -148,6 +150,7 @@ class Menu {
         }
 
         break;
+
       // Opção inválida
       default:
         getErroMensagem("Opção inválida");
@@ -283,6 +286,7 @@ class Menu {
           catch (PIException e) {} 
           catch (PDException e) {}
           break;
+          
         // Seguidores
         case 7:
         

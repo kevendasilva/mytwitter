@@ -1,0 +1,13 @@
++ cadastrar(usuario: Perfil): void
++ buscar(usuario: String): Perfil
++ atualizar(usuario: Perfil): void
+
+A implementação:
+
+cadastrar(): nada de usuários com o mesmo nome. caso isso ocorra a exceção UJCException
+deve ser levantada.
+
+buscar(): retornar o Perfil do usuario, caso exista. senão, retonar null.
+
+atualizar(): deve atualizar o perfil do usuario. caso o perfil não exista, a exceção 
+UNCException deve ser levantada.

@@ -1,0 +1,63 @@
++ criarPerfil(usuario: Perfil): void
++ cancelarPerfil(usuario: String): void
++ tweetar(usuario: String, mensagem: String): void
++ timeline(usuario: String): Vector<Tweet>
++ tweets(usuario: String): Vector<Tweet>
++ seguir(seguidor: String, seguido: String): void
++ numeroSeguidores(usuario: String): int
++ seguidores(usuario: String): Vector<Perfil>
++ seguidos(usuario: String): Vector<Perfil>
+
+Comportamento dos métodos:
+
+(ok) criarPerfil(): não deve existir mais de um usuário com o mesmo nome. caso aconteça a tentativa
+uma exceção é levantada (PEException)
+
+(ok) cancelarPerfil(): o perfil deve existir e estar ativo.
+                    caso o perfil não exista PIException
+                    caso o usuário exista e o perfil esteja invativo PDException
+
+(ok) tweetar(): passar os argumentos para instanciar um tweet
+            postar na timeline do perfil e do seus seguidores
+            o perfil do usuario deve existir e estar ativo
+
+            tamanho da mensagem: 1 a 140 caracteres
+            somente os seguidores que existem e estão ativos devem receber
+            o tweet
+
+            caso o perfil do usuario não exista PIException
+
+            caso a mensagem não siga a regra uma exceção deve ser levantada MFPException
+
+
+(ok) timeline(): o perfil deve existir e estar ativo.
+            caso não exista PIException
+            caso exista, mas inativo PDException
+
+(ok) tweets(): o perfil deve existir e estar ativo.
+            caso não exista PIException
+            caso exista, mas inativo PDException
+
+(ok) seguir(): atualizar tanto a lista de seguidos do perfil
+          quanto a lista de seguidores do perifl seguido
+          os perfis seguido e seguidor devem existir e estarem ativos
+          seguidor != seguido
+          PIException caso seguido ou seguidor não existam
+          PDException caso seguido ou seguidor estejam desativados
+          caso seguidor = seguido levatar SIException
+
+(ok) numeroSeguidores(): o perfil do usuário deve existir e estar ativo
+
+                    e os perfis só serão levados em conta se existirem e estiverem ativos
+                    caso não exista PIException
+                    caso exista, mas inativo PDException
+
+(ok) seguidores(): o perfil do usuário deve existir e estar ativo
+              só devem ser levados em consideração perfis que existam e que estejam ativos
+              caso não exista PIException
+              caso exista, mas inativo PDException
+
+(ok) seguidos(): o perfil do usuário deve existir e estar ativo
+              só devem ser levados em consideração perfis que existam e que estejam ativos
+              caso não exista PIException
+              caso exista, mas inativo PDException

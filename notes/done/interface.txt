@@ -1,0 +1,1 @@
+As interfaces são padrões definidos através de contratos ou especificações.

@@ -1,0 +1,6 @@
+herda de Perfil
+
+- cnpj: long
+
++ setCnpj(cnpj: long): void
++ getCnpj(): long

@@ -1,0 +1,6 @@
+herda de Perfil
+
+- cpf: long
+
++ setCpf(cpf: long): void
++ getCpf(): long

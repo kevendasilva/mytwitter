@@ -1,0 +1,31 @@
+Classes:
+
+Perfil (Abstrata)
+PessoaFisica
+PessoaJuridica
+Tweet
+MyTwitter
+
+
+Interfaces:
+
+IRepositorioUsuario
+ITwitter
+
+
+Exceções (classes):
+
+UJCException (Usuário já cadastrado)
+UNCException (Usuário não cadastrado)
+PEException (Perfil existente)
+PIException (Perfil inexistente)
+PDException (Perfil desativado)
+MFPException (Mensagem fora do padrão)
+SIException (Seguido inválido)
+
+
+
+Ideias: 
+Apresentar os tweets de acordo com o horário que foram postados
+  Pesquisar como capturar a hora do sistema
+  Como comparar os horários e definir uma ordem?

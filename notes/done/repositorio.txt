@@ -1,0 +1,7 @@
+repositorio para armazenar, buscar e atualizar perfis.
+
+implementa a interface IRepositorioUsuario
+
+utilizar a estrutura de armazenamento:
+
+Vector<Perfil>, para armazenar os usuários.

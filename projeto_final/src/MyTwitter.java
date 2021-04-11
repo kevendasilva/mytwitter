@@ -233,11 +233,13 @@ public class MyTwitter implements ITwitter{
       Vector<Perfil> seguidoresD = new Vector<Perfil>();
       Perfil seguidorRep;
 
+      // Perfis que estão desativados
       for (Perfil seguidor: perfil.getSeguidores()) {
         seguidorRep = repositorio.buscar(seguidor.getUsuario());
         if (!seguidorRep.isAtivo()) seguidoresD.add(seguidor);
       }
 
+      // Removendo perfis desativados
       for (Perfil seguidorD: seguidoresD) {
         seguidores.remove(seguidorD);
       }
@@ -263,11 +265,13 @@ public class MyTwitter implements ITwitter{
       Vector<Perfil> seguidosD = new Vector<Perfil>();
       Perfil seguidoRep;
 
+      // Perfis que estão desativados
       for (Perfil seguido: perfil.getSeguidos()) {
         seguidoRep = repositorio.buscar(seguido.getUsuario());
         if (!seguidoRep.isAtivo()) seguidosD.add(seguidoRep);
       }
 
+      // Removendo perfis desativados
       for (Perfil seguidoD: seguidosD) {
         seguidos.remove(seguidoD);
       }
