@@ -150,7 +150,7 @@ class Menu {
         break;
       // Opção inválida
       default:
-        getErroMensagem("\nOpção inválida\n");
+        getErroMensagem("Opção inválida");
         break;
     }
   }
@@ -200,11 +200,11 @@ class Menu {
           try {
             myTwitter.seguir(usuario, seguido);
           } catch (PIException e) {
-            mensagem = e.getMessage();
+            mensagem = "\n" + e.getMessage() + "\n";
           } catch (PDException e) {
-            mensagem = e.getMessage();
+            mensagem = "\n" + e.getMessage() + "\n";
           } catch (SIException e) {
-            mensagem = e.getMessage();
+            mensagem = "\n" + e.getMessage() + "\n";
           } finally {
             System.out.println(mensagem);
           }
@@ -333,6 +333,9 @@ class Menu {
 
     for (Tweet tweet: tweets) {
       
+      m = 0; 
+      i = 0;
+
       while (m != tweet.getMensagem().length()) {
         System.out.print("  ");
         m += 27;
@@ -347,7 +350,7 @@ class Menu {
         i = m - 1;
       }
 
-      System.out.println("\n  @" + tweet.getUsuario());
+      System.out.println("\n  @" + tweet.getUsuario() + "\n \n");
     }
 
   }

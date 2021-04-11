@@ -1,5 +1,6 @@
 import java.util.Vector;
 
+
 public class MyTwitter implements ITwitter{
 
   // Atributos da classe MyTwitter
@@ -142,11 +143,16 @@ public class MyTwitter implements ITwitter{
 
       // Tweets
       Vector<Tweet> tweets = perfil.getTimeline();
+      Vector<Tweet> tweetsN = new Vector<Tweet>();
 
       // Percorrendo todos os tweets da timeline 
       // e removendo aqueles que não pertecem ao usuario
-      for (Tweet tweet: tweets) {
-        if (!tweet.getUsuario().equals(perfil.getUsuario())) tweets.remove(tweet);
+      for (Tweet tweet: perfil.getTimeline()) {
+        if (!tweet.getUsuario().equals(perfil.getUsuario())) tweetsN.add(tweet);
+      }
+
+      for (Tweet tweet: tweetsN) {
+        tweets.remove(tweet);
       }
 
       // Retorne os Tweets do usuario
@@ -224,11 +230,16 @@ public class MyTwitter implements ITwitter{
 
       // Seguidores
       Vector<Perfil> seguidores = perfil.getSeguidores();
+      Vector<Perfil> seguidoresD = new Vector<Perfil>();
       Perfil seguidorRep;
 
       for (Perfil seguidor: perfil.getSeguidores()) {
         seguidorRep = repositorio.buscar(seguidor.getUsuario());
-        if (!seguidorRep.isAtivo()) seguidores.remove(seguidor);  
+        if (!seguidorRep.isAtivo()) seguidoresD.add(seguidor);
+      }
+
+      for (Perfil seguidorD: seguidoresD) {
+        seguidores.remove(seguidorD);
       }
       
       return seguidores;
@@ -249,11 +260,16 @@ public class MyTwitter implements ITwitter{
 
       // Seguidos
       Vector<Perfil> seguidos = perfil.getSeguidos();
+      Vector<Perfil> seguidosD = new Vector<Perfil>();
       Perfil seguidoRep;
 
       for (Perfil seguido: perfil.getSeguidos()) {
         seguidoRep = repositorio.buscar(seguido.getUsuario());
-        if (!seguidoRep.isAtivo()) seguidos.remove(seguido);  
+        if (!seguidoRep.isAtivo()) seguidosD.add(seguidoRep);
+      }
+
+      for (Perfil seguidoD: seguidosD) {
+        seguidos.remove(seguidoD);
       }
 
       return seguidos;
